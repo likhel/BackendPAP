@@ -21,6 +21,12 @@ class Pet(models.Model):
 
     # Linking the pet to a rehomer profile
     rehomer = models.ForeignKey('Rehomers.RehomerProfile', on_delete=models.CASCADE, related_name='pets', null=True)
+    adopter = models.ForeignKey(
+    'Adopters.AdopterProfile',  # Replace with the actual model name for adopters
+    on_delete=models.SET_NULL,  # Allows the adopter field to be set to NULL if the adopter is deleted
+    related_name='adopted_pets',  # Enables reverse querying
+    null=True,  # Allows NULL values in the database
+    blank=True ) # Makes the field optional in forms
     category = models.ForeignKey(PetCategory, on_delete=models.SET_NULL, null=True, related_name='pets')
    
     name = models.CharField(max_length=50) 

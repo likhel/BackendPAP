@@ -43,11 +43,7 @@ class AdoptionApplicationDeleteView(generics.DestroyAPIView):
     queryset = AdoptionApplication.objects.all()
     serializer_class = AdoptionApplicationSerializer
 
-#For Adopter References
 
-class AdopterReferenceView(generics.ListAPIView):
-    queryset = AdopterReference.objects.all()
-    serializer_class = AdopterReferenceSerializer
 
 
 

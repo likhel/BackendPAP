@@ -12,7 +12,3 @@ class AdoptionApplicationSerializer(serializers.ModelSerializer):
         model = AdoptionApplication
         fields = '__all__'
 
-class AdopterReferenceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AdopterReference
-        fields = '__all__'

@@ -13,5 +13,5 @@ urlpatterns = [
     path('ad_appUpdate',AdoptionApplicationUpdateView.as_view(), name='adopters'),
     path('ad_appDelete',AdoptionApplicationDeleteView.as_view(), name='adopters'),
 
-    path('ad_reference',AdopterReferenceView.as_view(), name='adopters'),
+
 ]
