@@ -15,11 +15,6 @@ class AdopterProfile(models.Model):
         return f"{self.user} - Adopter Profile"
 
 class AdoptionApplication(models.Model):
-   
-    from django.db import models
-from django.conf import settings
-
-class AdoptionApplication(models.Model):
     adopter = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
@@ -36,7 +31,7 @@ class AdoptionApplication(models.Model):
         choices=[('pending', 'Pending'), ('approved', 'Approved'), ('rejected', 'Rejected')],
         default='pending'
     )
-    motivation = models.TextField(default="")  
+    motivation = models.TextField(default="") 
     district = models.CharField(max_length=100, default="Unknown District")  
     ward = models.PositiveIntegerField(default=1)  
     contact = models.CharField(max_length=15, default="")  

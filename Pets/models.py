@@ -8,7 +8,7 @@ from core import settings
 
 
 class PetCategory(models.Model):
-    category_name = models.CharField(max_length=255)
+    category_name = models.IntegerField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
